@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Owls — Why They're Special</title>
+<meta name="description" content="A friendly, accessible page celebrating owls: their adaptations, species highlights, sounds, and ways to help them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#f59e0b; --glass: rgba(255,255,255,0.04);
+--max-width:1100px; color-scheme: dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#07111a 0%, #0f1724 100%);color:#e6eef6}
+a{color:var(--accent)}
+.container{max-width:var(--max-width);margin:0 auto;padding:24px}
+
+
+/* Skip link */
+.skip{position:absolute;left:12px;top:12px;background:#fff;color:#000;padding:8px 12px;border-radius:6px;transform:translateY(-120%);transition:transform .2s}
+.skip:focus{transform:translateY(0)}
+
+
+header{display:flex;gap:18px;align-items:center;justify-content:space-between;margin-bottom:28px}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#111827,#0ea5a8);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+h1{font-size:20px;margin:0}
+.tag{color:var(--muted);font-size:13px}
+
+
+nav ul{list-style:none;display:flex;gap:14px;padding:0;margin:0}
+nav a{padding:8px 12px;border-radius:8px;background:transparent}
+nav a:hover{background:var(--glass)}
+
+
+.hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:stretch;margin-bottom:28px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:20px;border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.6);}
+
+
+.hero-main h2{font-size:28px;margin:0 0 8px 0}
+.lead{color:var(--muted);line-height:1.5;margin-bottom:12px}
+.cta{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#ef4444);color:#051124;font-weight:700;text-decoration:none}
+
+
+.owl-stats{display:flex;gap:10px;margin-top:12px}
+.stat{flex:1;background:rgba(255,255,255,0.02);padding:10px;border-radius:10px;text-align:center}
+.stat b{display:block;font-size:18px}
+
+
+.hero-side img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block}
+
+
+section{margin-bottom:20px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+
+
+.feature h3{margin:0 0 8px 0}
+.feature p{color:var(--muted);margin:0}
+
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+
+
+footer{padding:18px 0;color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,0.03)}
+
+
+/* Responsive */
+@media (max-width:920px){.hero{grid-template-columns:1fr;}.hero-side{order:-1}.gallery{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:520px){.gallery img{height:120px}}
+
+
+/* small interactions */
+.play-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.03);cursor:pointer}
+.sr-only{position:absolute;left:-9999px}
+.badge{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px}
+
+
+/* accessibility focus */
+:focus{outline:3px solid rgba(245,158,11,0.18);outline-offset:3px}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="container" role="banner">
+<header>
+<div class="brand">
+<div class="logo" aria-hidden>OWL</div>
+<div>
+<h1>Owls — Why They're Special</h1>
+<div class="tag">Silent hunters • Night vision • Ancient symbols</div>
+</div>
+</div>
+<nav aria-label="Main navigation">
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#adaptations">Adaptations</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#help">How to help</a></li>
+</ul>
+</nav>
+</header>
+<main id="main">
+<p class="lead">Owls belong to two main groups: the true owls (Strigidae) and barn-owls (Tytonidae). They inhabit every continent except Antarctica and occupy habitats ranging from dense forests to deserts. They hold cultural significance in many societies — symbols of wisdom, harbingers of mystery, and players in folktales.</p>
+<div class="grid-3" style="margin-top:14px">
+<div class="feature card" role="article">
+<h3>Night vision</h3>
+<p>Large pupils and many rod cells let owls see well in low light. They rely on sight to hunt at dusk and night.</p>
+</div>
+<div class="feature card" role="article">
+<h3>Silent flight</h3>
+<p>Special feather edges break up airflow and dampen sound — making their flight whisper-quiet for stealthy hunting.</p>
+</div>
+<div class="feature card" role="article">
+<h3>Acute hearing</h3>
+<p>Asymmetrical ear placement and facial discs focus sound, allowing owls to locate prey even in complete darkness.</p>
+</div>
+</div>
+</section>
+
+
+<section id="adaptations" class="card">
+<h2>Unique adaptations — a closer look</h2>
+<ol>
+<li><strong>Facial discs</strong> — act like satellite dishes, directing sound into the ears.</li>
+<li><strong>Asymmetrical ears</strong> — time differences between ears let them pinpoint prey in 3D.</li>
+<li><strong>Flexible necks</strong> — up to 270° rotation, thanks to extra vertebrae and specialized blood flow adaptations.</li>
+<li><strong>Camouflage</strong> — feather patterns blend with tree bark and foliage, helping them remain unseen.</li>
+</ol>
+</section>
+
+
+<section id="gallery" class="card">
+<h2>Gallery</h2>
+<p class="tag">Click images to open full-size in a new tab.</p>
+<div class="gallery" role="list">
+<a href="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=9d7f9b3f0a1b2e5c3f96a3ef68f1b9d9" target="_blank" rel="noopener noreferrer"><img alt="Great horned owl perched on a branch" src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=9d7f9b3f0a1b2e5c3f96a3ef68f1b9d9"></a>
+<a href="https://images.unsplash.com/photo-1543872084-c7bd3822856f?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=2e7f2c7b0b7df7b8e7c1d6a9b5f7a1b2" target="_blank" rel="noopener noreferrer"><img alt="Barn owl flying" src="https://images.unsplash.com/photo-1543872084-c7bd3822856f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=2e7f2c7b0b7df7b8e7c1d6a9b5f7a1b2"></a>
+<a href="https://images.unsplash.com/photo-1501706362039-c6e8096f1d14?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a7141d3a5b2c7e9f8b1a3d2c6f0e2d1" target="_blank" rel="noopener noreferrer"><img alt="Snowy owl in the snow" src="https://images.unsplash.com/photo-1501706362039-c6e8096f1d14?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a7141d3a5b2c7e9f8b1a3d2c6f0e2d1"></a>
+</div>
+</section>
+
+
+<section id="help" class="card">
+<h2>How you can help owls</h2>
+<ul>
+<li>Protect and restore native habitat — preserve old trees and hedgerows used for nesting.</li>
+<li>Install owl boxes where appropriate — they provide safe nesting sites in areas lacking cavities.</li>
+<li>Reduce rodenticide use — poisons move up the food chain and harm owls.</li>
+<li>Drive carefully at dusk and dawn — many collisions happen near roads where prey is abundant.</li>
+<li>Support local conservation groups — donations, volunteering, and reporting injured birds help directly.</li>
+</ul>
+</section>
+
+
+<section class="card">
+<h2>Fun facts</h2>
+<div class="grid-3">
+<div class="feature"><h3>Owls swallow prey whole</h3><p class="tag">Regurgitated pellets help scientists study diets without harming animals.</p></div>
+<div class="feature"><h3>They are not always nocturnal</h3><p class="tag">Some species, like burrowing owls and snowy owls, are active during the day.</p></div>
+<div class="feature"><h3>Some owls migrate</h3><p class="tag">Movement depends on food availability and species — not all are migratory.</p></div>
+</div>
+</section>
+
+
+</main>
+
+
+<footer role="contentinfo">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+<div>Made with ❤️ for owls. Photo credits: Unsplash & Wikimedia Commons.</div>
+<div style="text-align:right"><small>Accessible, responsive, single-file demo • <a href="#" onclick="alert('Thanks for visiting!')">Say hi</a></small></div>
+</div>
+</footer>
+</div>
+
+
+<script>
+// small enhancement: prefer-reduced-motion respects
+(function(){
+if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+document.documentElement.style.scrollBehavior='auto';
+}
+})();
+</script>
+</body>
+</html>
